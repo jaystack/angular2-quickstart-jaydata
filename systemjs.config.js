@@ -11,7 +11,6 @@
     'rxjs':                       'node_modules/rxjs',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     '@angular':                   'node_modules/@angular',
-    'odatajs':                    'js/odatajs-4.0.0.js',
     'jaydata/core':               'js/jaydata.js',
     'jaydata/odata':              'js/jaydataproviders/oDataProvider.js'
   };
@@ -49,13 +48,10 @@
       },
       'jaydata/odata': {
           format: 'cjs',
-          deps: ['odatajs', 'jaydata/core']
-      },
-      'odatajs': {
-          format: 'global'
+          deps: ['jaydata/core']
       },
       './JayDataContext': {
-          deps: ['odatajs', 'jaydata/core', 'jaydata/odata']
+          deps: ['jaydata/core', 'jaydata/odata']
       }
     }
   }
